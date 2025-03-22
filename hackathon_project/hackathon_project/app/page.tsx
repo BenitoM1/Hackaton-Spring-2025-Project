@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Navbar } from "./Navbar";
+import { Navbar } from "./navbar";
 
 export default function Home() {
   return (
@@ -8,7 +8,6 @@ export default function Home() {
       <>
       <Navbar />
       </>
-      <h1>Website</h1>
     </div>
     <head>
     <title> BNBJI Financing</title>
