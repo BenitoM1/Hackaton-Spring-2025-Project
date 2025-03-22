@@ -13,7 +13,7 @@ export default function BudgetingPage() {
 
       <div className="container">
         <button className="help-btn">How to budget &amp; save</button>
-
+        
         <div className="limits">
           <h2>Limits</h2>
           <select>
