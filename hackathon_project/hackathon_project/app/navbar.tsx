@@ -1,12 +1,21 @@
 export function Navbar() {
     return(
-    <div>
-        <nav className="flex w full items-center justify-between px-[20px] py-[16px] lg:container lg:mx-auto lg:px-20"> </nav>
+    <nav className="flex w-full items-center justify-between px-[20px] py-[16px]">
+        <div>
+        <a href="home.tsx" className="button-class">Home</a>
+        </div>
 
-        <a href="#home">Home</a>
-        <a href="#add/sub">Add/Sub</a>
-        <a href="#stocks">Stocks</a>
-        <a href="#budget">Budgeting</a>
-    </div>
+        <div>
+        <a href="addsub.tsx" className="button-class">Add/Sub</a>
+        </div>
+
+        <div>
+        <a href="stocks.tsx" className="button-class">Stocks</a>
+        </div>
+
+        <div>
+        <a href="budgetguide.tsx" className="button-class">Budgeting</a>
+        </div>
+    </nav>
     )
 }
