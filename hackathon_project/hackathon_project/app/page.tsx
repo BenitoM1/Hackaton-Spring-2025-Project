@@ -4,7 +4,12 @@ import { Navbar } from "./navbar";
 export default function Home() {
   return (
     <html>
-
+      <div>
+      <>
+      <Navbar />
+      </>
+      <h1>Website</h1>
+    </div>
     <head>
     <title> BNBJI Financing</title>
     </head>
