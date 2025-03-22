@@ -14,7 +14,7 @@ export function Navbar() {
         </div>
 
         <div>
-        <a href="budgetguide.tsx" className="button-class">Budgeting</a>
+        <a href="budgetmain.tsx" className="button-class">Budgeting</a>
         </div>
     </nav>
     )
