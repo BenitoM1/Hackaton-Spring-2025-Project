@@ -42,7 +42,7 @@ export default function Home() {
     <div>
       <nav className="flex w-full items-center justify-between px-[20px] py-[16px]">
         <div>
-          <button onClick={toggleHome} className="button-class"> Home </button>
+          <a href="index.html" className="button-class">Stocks</a>
         </div>
 
         <div>
@@ -50,7 +50,7 @@ export default function Home() {
         </div>
 
         <div>
-          <Link href="/stocks" className="button-class">Stocks</Link>
+          <a href="stocks.html" className="button-class">Stocks</a>
         </div>
 
         <div>
