@@ -1,57 +1,91 @@
-<DOCSTYLE html>
+"use client"
 
-import Image from "next/image";
-import { Navbar } from "./navbar";
+import { useState } from "react";
+import Link from 'next/link';
 
 export default function Home() {
+  const [showBudgeting, setShowBudgeting] = useState(false)
+  const [showHome, setShowHome] = useState(false)
+  const [showBudgetHow, setShowBudgetHow] = useState(false)
+  const [showCreateUser, setShowCreateUser] = useState(false)
+
+  const toggleBudget = () => {
+    setShowHome(false)
+    setShowBudgetHow(false)
+    setShowBudgeting(true)
+  }
+
+  const toggleHome = () => {
+    setShowBudgeting(false)
+    setShowBudgetHow(false)
+    setShowHome(true)
+  }
+
+  const toggleBudgetHow = () => {
+    setShowBudgeting(false)
+    setShowHome(false)
+    setShowBudgetHow(true)
+  }
+
+  const toggleCreateUser = () => {
+    setShowCreateUser(true)
+  }
+
   return (
-    <html>
+    <div>
+      <nav className="flex w-full items-center justify-between px-[20px] py-[16px]">
+        <div>
+          <button onClick={toggleHome} className="button-class"> Home </button>
+        </div>
+
+        <div>
+          <Link href="/addsub" className="button-class">Add/Sub</Link>
+        </div>
+
+        <div>
+          <Link href="/stocks" className="button-class">Stocks</Link>
+        </div>
+
+        <div>
+          <button onClick={toggleBudget} className="button-class"> Budgeting </button>
+        </div>
+      </nav>
+
+      <head>
+        <title>BNBJI Financing</title>
+      </head>
+
+      <main className="main">
+        {!showBudgeting && !showHome ? (
+          <form>
+            <div>
+              <label htmlFor="user">Username:</label>
+              <input type="text" id="user" placeholder=" Please Type Here" />
+            </div>
+
+            <div>
+              <label htmlFor="pass">Password:</label>
+              <input type="password" id="pass" placeholder=" Please Type Here" />
+            </div>
 
       <div>
-      <Navbar/>
-      </div>
-
-<div>
-    <head>
-    <link rel="stylesheet" href="style.css"></link>
-    <title> BNBJI Financing</title>
-    
-    </head>
-</div>
-
-    <body>
-      <form>
-
-      <div>
-      <p> Login</p>
-      <label htmlFor="user">Username:</label>
-      <input type="text" id="user" placeholder=" Please Type Here" required/>
-      </div>
-
-      <div>
-      <label htmlFor="pass">Password:</label>
-      <input type="text" id="pass" placeholder=" Please Type Here" required/>
-      </div>
-
-      <div>
-      <p><label htmlFor="submit">Submit</label></p>
-      <input type="button" id="submit"/>
-      </div>
-
-      <div>
-      <p>Don't have an account? <label htmlFor="create">Create User</label></p>
-      <input type="button" id="create"/>
+      <label htmlFor="create">Create User</label>
+      <input type="button" id="create"></input>
       </div>
 
       <div>
       <label htmlFor="forgot">Forgot Password</label>
-      <input type="button" id="forgot"/>
+      <input type="button" id="forgot"></input>
       </div>
       
+      <div>
+        <input type= "submit"></input>
+      </div>
+
       </form>
     </body>
 
-</html>
+    </html>
 
   )
 
