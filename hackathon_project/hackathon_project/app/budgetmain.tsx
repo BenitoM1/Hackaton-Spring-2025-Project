@@ -12,7 +12,7 @@ export default function BudgetMain() {
           <option value="week">Week</option>
           <option value="year">Year</option>
         </select>
-      </div>
+      </div>s
 
       <div className="spending-goal mt-4">
         <label htmlFor="spend">How much do you want to spend?</label>
