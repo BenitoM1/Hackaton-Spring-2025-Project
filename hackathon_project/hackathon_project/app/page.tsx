@@ -36,10 +36,6 @@ export default function Home() {
       <input type="button" id="forgot"></input>
       </div>
       
-      <div>
-        <input type= "submit"></input>
-      </div>
-
       </form>
     </body>
 
