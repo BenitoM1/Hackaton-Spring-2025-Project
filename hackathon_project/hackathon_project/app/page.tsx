@@ -24,11 +24,18 @@ export default function Home() {
   const toggleBudgetHow = () => {
     setShowBudgeting(false)
     setShowHome(false)
+    setShowCreateUser(false)
     setShowBudgetHow(true)
+
+
   }
 
   const toggleCreateUser = () => {
+    setShowBudgeting(false)
+    setShowHome(false)
+    setShowBudgetHow(false)
     setShowCreateUser(true)
+  
   }
 
   return (
@@ -56,7 +63,7 @@ export default function Home() {
       </head>
 
       <main className="main">
-        {!showBudgeting && !showHome ? (
+        {!showBudgeting && !showHome && !showBudgetHow && !showCreateUser ? (
           <form>
             <div>
               <label htmlFor="user">Username:</label>
@@ -71,12 +78,6 @@ export default function Home() {
             <div>
               <button onClick={toggleCreateUser} className="button-class"> Create User </button>
             </div>
-
-            <div>
-              <label htmlFor="forgot">Forgot Password</label>
-              <button type="button" id="forgot">Forgot</button>
-            </div>
-
             <div>
               <input type="submit" value="Submit" />
             </div>
@@ -107,13 +108,12 @@ export default function Home() {
           </body>
 
         ): showBudgetHow ?(
-          <html>
             <div>
             <header>Budget Guide</header>
             <h1>It Looks Like You Might Need Help Budgeting.</h1>
 
             <h1>Here is a good option for safety.</h1>
-            <a>- https://shorturl.at/NIZOD</a>
+            <a> https://shorturl.at/NIZOD</a>
 
             <h1>Looking for something user friendly?</h1>
             <a>- https://shorturl.at/nYAw0</a>
@@ -121,11 +121,30 @@ export default function Home() {
             <h1>Maybe you just want the best all around!</h1>
             <a>- https://shorturl.at/TWQ2T</a>
             </div>
-            </html>
         ): showCreateUser ? (
-          <body>
-              <h1>YOYOYO</h1>
-          </body>
+          <div>
+            <div className="signup-container">
+        <h1>Create an Account</h1>
+        <form action="/signup" method="POST">
+          <label htmlFor="username">Username</label>
+          <input type="text" id="username" name="username" required />
+  
+          <label htmlFor="email">Email</label>
+          <input type="email" id="email" name="email" required />
+  
+          <label htmlFor="password">Password</label>
+          <input type="password" id="password" name="password" required />
+  
+          <label htmlFor="checking">Checking Account Number</label>
+          <input type="text" id="checking" name="checking" required />
+  
+          <label htmlFor="savings">Savings Account Number</label>
+          <input type="text" id="savings" name="savings" required />
+  
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+          </div>
         ): null}
       </main>
     </div>
