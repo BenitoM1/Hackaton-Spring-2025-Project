@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stocks</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+
+<div class="header">
+        <a href="#default" class="logo">
+        <img src="logo.webp" alt="bank logo">
+        <div class="header-right">
+        <a class="active" href="index.html">Home</a>
+          <a href="stocks.html">Stocks</a>
+          <a href="budget.html">Budged</a>
+        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="pad">Stock Market</h1>
+    <div id="wallet">Balance: $<span id="balance">1000</span></div>
+
+    <h2>Select a Stock</h2>
+    <select id="stock-select"></select>
+    
+    <h2>Investment</h2>
+    <input type="number" id="amount" placeholder="Quantity">
+    <button onclick="buyStock()">Buy</button>
+    <button onclick="sellStock()">Sell</button>
+
+    <h2>Market Status</h2>
+    <table>
+        <thead>
+            <tr>
+            <th>Company</th>
+            <th>Symbol</th>
+            <th>Price</th>
+            <th>Trend</th>
+            </tr>
+        </thead>
+        <tbody id="stock-list">
+        </tbody>
+    </table>
+
+    <h3>Your Portfolio</h3>
+    <table>
+        <thead>
+            <tr>
+            <th>Stock</th>
+            <th>Quantity</th>
+            <th>Invested Value</th>
+            </tr>
+        </thead>
+        <tbody id="portfolio-list">
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
