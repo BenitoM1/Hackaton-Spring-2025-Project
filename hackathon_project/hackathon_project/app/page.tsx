@@ -195,7 +195,7 @@ export default function Home() {
       </div>
         ): showAddSub ?(
           <body>
-            <h1> testing for addsub</h1>
+            <h1>WE were tyring to add a addsub function but it stopped working so we deleted it</h1>
           </body>
         ): showStock ?(
           <body>
